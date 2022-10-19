@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
     <title>Cotizacion</title>
 </head>
 <body>
-    
+    <div id="contenedor">
+        
+        <div id="izquierda">
+            <label for="Valor del automovil">Valor del automovil: </label>
+            <input type="text" id="valor" name="valor" required="true">
+            <br>
+            <label for="Enganche">Enganche: </label>
+            <input type="text" name="txtEnganche" id="txtEnganche" readonly="true">
+            <br>
+            <label for="Total a financiar">Total a Financiar: </label>
+            <input type="text" name="txtFinanciar" id="txtFinanciar" readonly="true">
+            <br><br>
+        </div>
+        <div id="derecha">
+            <h2>Planes de credito</h2>
+
+                <select name="cmbPlanes" id="txtValor">
+                    <option value="12">12 Meses</option>
+                    <option value="18">18 Meses</option>
+                    <option value="24">24 Meses</option>
+                    <option value="36">36 Meses</option>
+                    <option value="48">48 Mesess</option>
+                </select>
+            <br><br>
+        </div>
+        <div id="abajo-izq">
+            <br><br>
+            <input type="submit" value="Calcular" id="btnCalcular" onclick=calcular()>
+            <input type="button" value="Limpiar" onclick=limpiar()> 
+        </div>
+
+        <div id="abajo-der">
+            <label for="Pago Mensual">Pago Mensual: </label>
+            <input type="text" id="txtPago" readonly="true">
+        </div>
+
+    </div>
 </body>
 </html>
